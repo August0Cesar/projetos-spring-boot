@@ -1,0 +1,5 @@
+br/com/augusto/api_teste/ApiTesteApplication.class
+br/com/augusto/api_teste/controller/CarController.class
+br/com/augusto/api_teste/repository/CarRepository.class
+br/com/augusto/tools/ToolValor.class
+br/com/augusto/api_teste/model/Car.class
