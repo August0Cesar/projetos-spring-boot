@@ -48,7 +48,6 @@ public class CarControllerTest extends ApiTesteApplicationTests {
 				new Car(new Long("2"), "Chevett", "MG", "BRANCO", new Date()));
 
 		this.carRepository.save(listaCarros);
-		//this.carRepository.save(new Car(new Long("1"), "Chevett", "MG", "BRANCO", new Date()));
 	}
 
 	@Test
