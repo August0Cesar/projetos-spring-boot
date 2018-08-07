@@ -10,7 +10,7 @@ import br.com.augusto.api_teste.ApiTesteApplication;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes=ApiTesteApplication.class)
-@TestPropertySource(locations="classpath:test.properties")
+@TestPropertySource(locations="classpath:application_test.properties")
 public class ApiTesteApplicationTests {
 
 	@Test
