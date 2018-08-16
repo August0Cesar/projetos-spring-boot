@@ -50,12 +50,6 @@ public class CarControllerTest extends ApiTesteApplicationTests {
 		this.carRepository.save(listaCarros);
 	}
 
-	@Test
-	public void getAllCarTest() throws Exception {
-		this.mockMvc.perform(MockMvcRequestBuilders.get("/api/carros"))
-				.andExpect(MockMvcResultMatchers.status().isOk());
-	}
-
 	protected String json(Car car) throws IOException {
 		MockHttpOutputMessage mockHttpOutputMessage = new MockHttpOutputMessage();
 		MappingJackson2HttpMessageConverter m = new MappingJackson2HttpMessageConverter();
@@ -65,7 +59,8 @@ public class CarControllerTest extends ApiTesteApplicationTests {
 
 	@Test
 	public void createCarTest() throws Exception {
-		Car c = new Car(new Long("1"), "Chevett", "MG", "BRANCO", new Date());
+		System.out.println("Teste createCarTest()");
+		Car c = new Car(new Long("1"), "Chevett","MG" , "BRANCO", new Date());
 		String carJson = json(c);
 		this.mockMvc.perform(MockMvcRequestBuilders.post("/api/carros").
 				contentType(this.contentType).content(carJson))
@@ -75,6 +70,7 @@ public class CarControllerTest extends ApiTesteApplicationTests {
 	//testa o serviço que retorna lista de carros
 	@Test
 	public void getAllCarsTes() throws Exception {
+		System.out.println("Teste getAllCarsTest()");
 		List<Car> listaCarros = this.carRepository.findAll();
 		this.mockMvc.perform(MockMvcRequestBuilders.get("/api/carros")
 				.contentType(this.contentType))
