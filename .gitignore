@@ -1,3 +1,6 @@
 api_teste/target/
 api_teste/src/test/resources/application_test.properties
 api_teste/src/main/resources/application.properties
+
+MentsConsultoria/target/
+redirectBiisSocial/target/
