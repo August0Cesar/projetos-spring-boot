@@ -26,8 +26,8 @@
 <body class="landing-page sidebar-collapse">
 	<nav
 		class="navbar navbar-transparent navbar-color-on-scroll fixed-top navbar-expand-lg"
-		color-on-scroll="100" id="sectionsNav">
-		<div class="container">
+		id="sectionsNav">
+		<div class="container"><!-- color-on-scroll="100" -->
 			<div class="navbar-translate">
 				<a class="navbar-brand" href="#"> Ments Consultoria </a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -50,7 +50,8 @@
 					<li class="nav-item"><a href="#" class="nav-link">Cursos</a></li>
 					<li class="nav-item"><a href="#trabalhe-conosco"
 						class="nav-link">Trabalhe Conosco </a></li>
-					<li class="nav-item"><a href="#" class="nav-link" data-toggle="modal" data-target="#exampleModal">Acesso a
+					<li class="nav-item"><a href="#" class="nav-link"
+						data-toggle="modal" data-target="#exampleModal">Acesso a
 							Clientes</a></li>
 				</ul>
 			</div>
@@ -127,9 +128,9 @@
 							</div>
 							<div class="tab-pane" id="consultoriaFinancas-1">
 								<p class="text-justify">
-									&bull; Gestão Estratégica para Resultados.<br /> &bull; Análise
-									da viabilidade em Investimentos.<br /> &bull; Projetos de
-									Financeamentos.<br /> &bull; Planejamento Tributário.<br />
+									&bull; Gestão Estratégica para Resultados.<br /> &bull;
+									Análise da viabilidade em Investimentos.<br /> &bull; Projetos
+									de Financeamentos.<br /> &bull; Planejamento Tributário.<br />
 									&bull; Avaliação para Aquisição de Empresas.<br /> &bull;
 									Implatação de Controles Internos.<br /> &bull; Implatação de
 									Centro de Custos.<br />
@@ -159,13 +160,13 @@
 						</div>
 						<p class="text-justify">
 							&bull; Curso de Finanças Pessoais.<br /> &bull; Curso de Finan
-							Empresariais.<br /> &bull; Curso de Excel Básico, Intermediário e
-							Avançado.<br /> &bull; Curso Mapeamento de Processos <br />BPMN/Viso(in
+							Empresariais.<br /> &bull; Curso de Excel Básico, Intermediário
+							e Avançado.<br /> &bull; Curso Mapeamento de Processos <br />BPMN/Viso(in
 							company).<br /> &bull; Curso de Mapeamento de Matemática <br />Financeira
 							e Comercial.<br /> &bull; Curso de Elaboração de Plano de
-							Negócios.<br /> &bull; Curso de Balanced ScoreCard.<br /> &bull;
-							Curso de Controle da Qualidade Total<br /> &bull; Curso Finanças
-							Empresariais.
+							Negócios.<br /> &bull; Curso de Balanced ScoreCard.<br />
+							&bull; Curso de Controle da Qualidade Total<br /> &bull; Curso
+							Finanças Empresariais.
 						</p>
 					</div>
 				</div>
@@ -316,40 +317,44 @@
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalLabel">Entre com seu usuário</h5>
+					<h5 class="modal-title" id="exampleModalLabel">Entre com seu
+						usuário</h5>
 					<button type="button" class="close" data-dismiss="modal"
 						aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					</button>
 				</div>
 				<div class="modal-body">
-				<!-- Formulario de Loogin -->
-				<form class="form" method="post" action="login">
-                    <div class="form-group">
-                      <div class="input-group">
-                        <div class="input-group-prepend">
-                          <span class="input-group-text">
-                            <i class="material-icons">mail</i>
-                          </span>
-                        </div>
-                        <input type="text" class="form-control" placeholder="Email..." name="username"/>
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <div class="input-group">
-                        <div class="input-group-prepend">
-                          <span class="input-group-text">
-                            <i class="material-icons">lock_outline</i>
-                          </span>
-                        </div>
-                        <input type="password" placeholder="Password..." class="form-control" name="password" />
-                      </div>
-                    </div>
-                        <div class="text-center">
-                        <input type="submit" class="btn btn-danger btn-round" value="Entrar" name="submit"/>
-                      
-                    </div>
-                  </form>
+					<!-- Formulario de Loogin -->
+					<form class="form" method="post" action="login">
+						<div class="form-group">
+							<div class="input-group">
+								<div class="input-group-prepend">
+									<span class="input-group-text"> <i
+										class="material-icons">mail</i>
+									</span>
+								</div>
+								<input type="text" class="form-control" placeholder="Email..."
+									name="username" />
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="input-group">
+								<div class="input-group-prepend">
+									<span class="input-group-text"> <i
+										class="material-icons">lock_outline</i>
+									</span>
+								</div>
+								<input type="password" placeholder="Password..."
+									class="form-control" name="password" />
+							</div>
+						</div>
+						<div class="text-center">
+							<input type="submit" class="btn btn-danger btn-round"
+								value="Entrar" name="submit" />
+
+						</div>
+					</form>
 				</div>
 			</div>
 		</div>
