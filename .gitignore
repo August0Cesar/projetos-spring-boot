@@ -3,4 +3,11 @@ api_teste/src/test/resources/application_test.properties
 api_teste/src/main/resources/application.properties
 
 MentsConsultoria/target/
+MentsConsultoriaVersaoBanco/target/
+MentsConsultoria/.settings/.jsdtscope
+MentsConsultoria/.settings/org.eclipse.wst.common.component
+MentsConsultoria/.settings/org.eclipse.wst.jsdt.ui.superType.container
+MentsConsultoria/.settings/org.eclipse.wst.jsdt.ui.superType.name
+MentsConsultoria/.settings/org.eclipse.wst.validation.prefs
+
 redirectBiisSocial/target/
