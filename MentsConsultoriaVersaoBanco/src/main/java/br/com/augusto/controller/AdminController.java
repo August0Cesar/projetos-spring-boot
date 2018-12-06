@@ -49,8 +49,8 @@ public class AdminController {
 	@Autowired
 	RoleRepository roleRepository;
 
-	private static final String UPLOADED_FOLDER = "C:\\Users\\augusto\\Documents\\workspace-sts-3.9.3.RELEASE\\MentsConsultoriaVersaoBanco\\src\\main\\resources\\static\\filesEmpresa\\";
-	//private static final String UPLOADED_FOLDER_PRODUCAO = "C:\\Users\\augusto\\Documents\\workspace-sts-3.9.3.RELEASE\\MentsConsultoriaVersaoBanco\\src\\main\\resources\\static\\filesEmpresa\\";
+	//private static final String UPLOADED_FOLDER = "C:\\Users\\augusto\\Documents\\workspace-sts-3.9.3.RELEASE\\MentsConsultoriaVersaoBanco\\src\\main\\resources\\static\\filesEmpresa\\";
+	private static final String UPLOADED_FOLDER = "/home/augusto/filesMentsConsultoria/";//producao
 
 	@GetMapping("/postFileAdmin")
 	public ModelAndView homePage() {
@@ -93,7 +93,7 @@ public class AdminController {
 		String[] arq = arquivoOriginal.split(";");
 		
 		Arquivos arquivo = new Arquivos();
-		arquivo.setCaminhoArquivo(UPLOADED_FOLDER + file.getOriginalFilename());
+		arquivo.setCaminhoArquivo(UPLOADED_FOLDER + arquivoOriginal + "." + arq);
 		arquivo.setDataPostagem(new Date());
 		arquivo.setEmpresa(empresa);
 		arquivo.setNomeArquivo(arq[0]);
@@ -102,11 +102,11 @@ public class AdminController {
 
 			// Get the file and save it somewhere
 			byte[] bytes = file.getBytes();
-			Path path = Paths.get(UPLOADED_FOLDER + file.getOriginalFilename());
+			Path path = Paths.get(UPLOADED_FOLDER + arquivo.getNomeArquivo() + arquivo.getExtenssaoArquivo());
 			Files.write(path, bytes);
 
-			redirectAttributes.addFlashAttribute("message",
-					"You successfully uploaded '" + file.getOriginalFilename() + "'");
+			//redirectAttributes.addFlashAttribute("message",
+				//	"You successfully uploaded '" + file.getOriginalFilename() + "'");
 
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -137,7 +137,7 @@ public class AdminController {
 		
 		String senha = geraSenha();
 		Usuario usuario = new Usuario(geraLogin(nomeEmpresario),nomeEmpresario,true
-					,new BCryptPasswordEncoder().encode(geraSenha()),listaPermissoes,senha);
+					,new BCryptPasswordEncoder().encode(senha),listaPermissoes,senha);
 		
 		List<Usuario> listausuario = new ArrayList<Usuario>();
 		listausuario.add(usuarioRepository.save(usuario));

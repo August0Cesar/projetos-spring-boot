@@ -4,7 +4,7 @@ import org.springframework.data.repository.CrudRepository;
 
 import br.com.augusto.models.Usuario;
 
-public interface UsuarioRepository extends CrudRepository<Usuario, String> {
+public interface UsuarioRepository extends CrudRepository<Usuario, Integer> {
 
 	Usuario findByLoginAndSenha(String login,String senha);
 
